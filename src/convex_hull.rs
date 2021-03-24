@@ -3,6 +3,23 @@ use std::cmp::Ordering;
 //https://www.geeksforgeeks.org/convex-hull-set-2-graham-scan/
 //https://www.youtube.com/watch?v=vPDPE66nhlo
 
+//Sample Main Code:
+// mod convex_hull;
+// use convex_hull::graham_scan;
+// let mut points: Vec<Vector2<f32>> = vec![
+//         Vector2::new(0f32, 0f32),
+//         Vector2::new(10f32, 0f32),
+//         Vector2::new(10f32, 10f32),
+//         Vector2::new(0f32, 10f32),
+//         Vector2::new(3f32, 0f32),
+//         Vector2::new(1f32, 0f32),
+//         Vector2::new(3f32, 3f32),
+//     ];
+//     let hull = graham_scan(&mut points);
+//     println!("Hull Length: {}", hull.len());
+//     let vv: Vec<(f32, f32)> = hull.iter().map(|x: &Vector2<f32>| (x.x, x.y)).collect();
+//     println!("Hull: {:?}", vv);
+
 fn get_orientation(p: &Vector2<f32>, q: &Vector2<f32>, r: &Vector2<f32>) -> Orientation {
     let det: f32 = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
     let threshold = 2f32 * f32::EPSILON;
