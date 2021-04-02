@@ -2,14 +2,16 @@
 use nalgebra::Vector2;
 mod convex_hull;
 use convex_hull::{graham_scan, jarvis_march};
+mod line_segment2;
+mod point2;
 mod polygon_2d;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let points: Vec<Vector2<f32>> = vec![
         Vector2::new(0f32, 0f32),
-        Vector2::new(0f32, 1f32),
-        Vector2::new(1f32, 1f32),
         Vector2::new(1f32, 0f32),
+        Vector2::new(1f32, 1f32),
+        Vector2::new(0f32, 1f32),
         Vector2::new(0f32, 0f32),
         //Clockwise Subtraction
         // Vector2::new(0f32, 5f32),

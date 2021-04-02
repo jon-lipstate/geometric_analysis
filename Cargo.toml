@@ -1,5 +1,5 @@
 [package]
-name = "stress_methods"
+name = "geometric_analysis"
 version = "0.1.0"
 authors = ["jon lipstate <jon@lipstate.com>"]
 edition = "2018"

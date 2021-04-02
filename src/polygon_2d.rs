@@ -1,5 +1,8 @@
+use crate::{
+    convex_hull::{get_orientation, Orientation},
+    line_segment2::LineSegment2,
+}; //TODO: Move these to a Utilities Module
 use nalgebra::Vector2;
-
 /// Ordered List of points representing a manifold polygon
 /// Loop Directions -  CCW: Additive, CW: Subtractive
 /// Does not require Loop Closure (e.g. first and last points are the same)
@@ -47,7 +50,24 @@ pub fn centroid(points: &Vec<Vector2<f32>>) -> Vector2<f32> {
 
     Vector2::new(x / area_6x, y / area_6x)
 }
-
+/// # moment_of_inertia
+/// ### Arguments:
+/// `points`: Hull of the polygon to be assessed
+///
+/// `summation_point`: Arbitrary point to calculate MOI about. If providing None, defaults to C.G.
+///
+/// ### Returns:
+/// `(IXX, IYY, IXY)`: Tuple
+///
+/// ### Assumptions:
+/// Hull:
+/// - Manifold
+/// - Convex or Concave
+/// - Ordered Counter-Clockwise
+///     - Clockwise ordering produces correct magnitude, but inverted sign.
+/// ### References:
+/// https://en.wikipedia.org/wiki/Second_moment_of_area#Any_cross_section_defined_as_polygon
+///Returns Tuple: (IXX, IYY, IXY)
 pub fn moment_of_inertia(
     points: &Vec<Vector2<f32>>,
     summation_point: Option<Vector2<f32>>,
@@ -71,52 +91,58 @@ pub fn moment_of_inertia(
         let current: Vector2<f32> = points_sum_pt[i];
         let next: Vector2<f32> = points_sum_pt[i + 1];
 
-        let lace = -(current.x * next.y - next.x * current.y) / 2f32; //max reverses this..?
+        let lace = current.x * next.y - next.x * current.y;
+        let _ixo = f32::powi(current.y, 2) + current.y * next.y + f32::powi(next.y, 2);
+        let _iyo = f32::powi(current.x, 2) + current.x * next.x + f32::powi(next.x, 2);
+        let _ixyo = current.x * next.y + 2f32 * current.x * current.y + next.x * current.y;
 
-        ixo += (f32::powi(current.y, 2) + current.y * next.y + f32::powi(next.y, 2)) / 6f32 * lace;
-        iyo += lace * (f32::powi(current.x, 2) + current.x * next.x + f32::powi(next.x, 2)) / 6f32;
-        ixyo += lace
-            * (current.x * (2f32 * current.y + next.y) + next.x * (2f32 * next.y + current.y))
-            / 12f32;
-
-        println!(
-            "lace: {}, cy2: {},cyny: {}, ny2: {}, (...) {}, lace/6: {}",
-            lace,
-            f32::powi(current.y, 2),
-            current.y * next.y,
-            f32::powi(next.y, 2),
-            f32::powi(current.y, 2) + current.y * next.y + f32::powi(next.y, 2),
-            lace / 6f32
-        );
-
-        println!(
-            "ixo: {}, c:{},{}, n:{},{}",
-            ixo, current.x, current.y, next.x, next.y
-        );
+        ixo += lace * _ixo / 12f32;
+        iyo += lace * _iyo / 12f32;
+        ixyo += lace * _ixo / 24f32;
     }
 
-    return (ixo, iyo, ixyo);
+    (ixo, iyo, ixyo)
 }
 
-/// Takes an unordered hull, and sorts it into CCW Order
-pub fn sort_hull() {
-    panic!("not implemented");
-    // def PolygonSort(corners):
-    // # calculate centroid of the polygon
-    // n = len(corners) # of corners
-    // cx = float(sum(x for x, y in corners)) / n
-    // cy = float(sum(y for x, y in corners)) / n
-    // # create a new list of corners which includes angles
-    // cornersWithAngles = []
-    // for x, y in corners:
-    //     dx = x - cx
-    //     dy = y - cy
-    //     an = (math.atan2(dy, dx) + 2.0 * math.pi) % (2.0 * math.pi)
-    //     cornersWithAngles.append((dx, dy, an))
-    // # sort it using the angles
-    // cornersWithAngles.sort(key = lambda tup: tup[2])
-    // return cornersWithAngles
+pub fn principal_moment_of_inertia(ixx: f32, iyy: f32, ixy: f32) -> (f32, f32, f32) {
+    let outside = (ixx + iyy) / 2f32;
+    let root = f32::sqrt(f32::powi((ixx - iyy) / 2f32, 2) + f32::powi(ixy, 2));
+
+    let angle = f32::atan(-2f32 * ixy / (ixx - iyy)) / 2f32;
+    let prin1 = outside + root;
+    let prin2 = outside - root;
+
+    (prin1, prin2, angle)
 }
 
-//https://github.com/cmccomb/structural-shapes
-//https://github.com/suavecode/SUAVE
+//https://en.wikipedia.org/wiki/First_moment_of_area
+// Sum(yA)
+fn first_moment_q() {}
+
+fn split_hull(points: &Vec<Vector2<f32>>, split_line: LineSegment2) {
+    let mut intersections: Vec<(usize, Vector2<f32>)> = Vec::new(); //Collect (Index, Direction-Vector)
+    for i in 0..points.len() - 1 {
+        let segment = LineSegment2::new(points[i], points[i + 1]);
+        if split_line.intersects(&segment) {
+            intersections.push((i, &segment.end - &segment.start));
+        }
+    }
+    if intersections.len() % 2 != 0 {
+        panic!("Polygon has an un-even number of intersections. Should not be possible.");
+    }
+
+    // Test if points[0] is above split-line
+    // if so - take points 0-i-1
+    // at i, insert an intersection point
+    // skip until next i, insert intersection point and so forth
+
+    // Use cross product to determine whether a point lies above or below a line.
+    //   Math: https://math.stackexchange.com/a/274728
+    //   English: "above" means that looking from point a towards point b,
+    //               the point p lies to the left of the line.
+    //   is_above = lambda p,a,b: np.cross(p-a, b-a) < 0
+}
+
+pub struct Polygon2D {
+    pub points: Vec<Vector2<f32>>,
+}

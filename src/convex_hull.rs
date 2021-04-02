@@ -44,7 +44,7 @@ fn cmp_f32(a: f32, b: f32) -> Ordering {
     }
 }
 
-fn get_orientation(a: &Vector2<f32>, b: &Vector2<f32>, c: &Vector2<f32>) -> Orientation {
+pub fn get_orientation(a: &Vector2<f32>, b: &Vector2<f32>, c: &Vector2<f32>) -> Orientation {
     let det: f32 = (b.x - a.x) * (c.y - b.y) - (b.y - a.y) * (c.x - b.x);
 
     if cmp_f32(0f32, det) == Ordering::Equal {
@@ -56,7 +56,7 @@ fn get_orientation(a: &Vector2<f32>, b: &Vector2<f32>, c: &Vector2<f32>) -> Orie
     }
 }
 #[derive(PartialEq, Debug)]
-enum Orientation {
+pub enum Orientation {
     Collinear,
     Clockwise,
     CounterClockwise,
@@ -182,4 +182,24 @@ pub fn jarvis_march(points: &mut Vec<Vector2<f32>>) -> Vec<Vector2<f32>> {
     }
 
     return hull;
+}
+
+/// Takes an unordered hull, and sorts it into CCW Order
+pub fn sort_hull() {
+    panic!("not implemented");
+    // def PolygonSort(corners):
+    // # calculate centroid of the polygon
+    // n = len(corners) # of corners
+    // cx = float(sum(x for x, y in corners)) / n
+    // cy = float(sum(y for x, y in corners)) / n
+    // # create a new list of corners which includes angles
+    // cornersWithAngles = []
+    // for x, y in corners:
+    //     dx = x - cx
+    //     dy = y - cy
+    //     an = (math.atan2(dy, dx) + 2.0 * math.pi) % (2.0 * math.pi)
+    //     cornersWithAngles.append((dx, dy, an))
+    // # sort it using the angles
+    // cornersWithAngles.sort(key = lambda tup: tup[2])
+    // return cornersWithAngles
 }
