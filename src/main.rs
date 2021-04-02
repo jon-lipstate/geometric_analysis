@@ -2,27 +2,27 @@
 use nalgebra::Vector2;
 mod convex_hull;
 use convex_hull::{graham_scan, jarvis_march};
+mod polygon_2d;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let mut points: Vec<Vector2<f32>> = vec![
+    let points: Vec<Vector2<f32>> = vec![
         Vector2::new(0f32, 0f32),
-        Vector2::new(10f32, 0f32),
-        Vector2::new(10f32, 10f32),
-        Vector2::new(0f32, 10f32),
-        Vector2::new(3f32, 0f32),
+        Vector2::new(0f32, 1f32),
+        Vector2::new(1f32, 1f32),
         Vector2::new(1f32, 0f32),
-        Vector2::new(3f32, 3f32),
+        Vector2::new(0f32, 0f32),
+        //Clockwise Subtraction
+        // Vector2::new(0f32, 5f32),
+        // Vector2::new(5f32, 5f32),
+        // Vector2::new(5f32, 0f32),
+        // Vector2::new(0f32, 0f32),
     ];
-
-    let hull = graham_scan(&mut points.clone());
-    println!("graham_scan, Hull Length: {}", hull.len());
-    let vv: Vec<(f32, f32)> = hull.iter().map(|x: &Vector2<f32>| (x.x, x.y)).collect();
-    println!("Hull: {:?}", vv);
-
-    let hull = jarvis_march(&mut points);
-    println!("jarvis_march, Hull Length: {}", hull.len());
-    let vv: Vec<(f32, f32)> = hull.iter().map(|x: &Vector2<f32>| (x.x, x.y)).collect();
-    println!("Hull: {:?}", vv);
+    let area = polygon_2d::area(&points);
+    let centroid = polygon_2d::centroid(&points);
+    //let moi = polygon_2d::moment_of_inertia(&points, Some(Vector2::new(0f32, 0f32)));
+    let moi = polygon_2d::moment_of_inertia(&points, None);
+    println!("Area: {}, Centroid: {}", area, centroid);
+    println!("moi: {:?}", moi);
     Ok(())
 }
 //concave hull:
