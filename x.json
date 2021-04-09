@@ -1,0 +1,1029 @@
+{
+    "totalHits": 1,
+    "currentPage": 1,
+    "totalPages": 1,
+    "pageList": [
+        1
+    ],
+    "foodSearchCriteria": {
+        "dataType": [
+            "Foundation"
+        ],
+        "query": "Broccoli",
+        "generalSearchInput": "Broccoli",
+        "pageNumber": 1,
+        "numberOfResultsPerPage": 50,
+        "pageSize": 50,
+        "requireAllWords": false,
+        "foodTypes": [
+            "Foundation"
+        ]
+    },
+    "foods": [
+        {
+            "fdcId": 747447,
+            "description": "Broccoli, raw",
+            "lowercaseDescription": "broccoli, raw",
+            "scientificName": "Brassica oleracea var. italica",
+            "commonNames": "",
+            "additionalDescriptions": "",
+            "dataType": "Foundation",
+            "ndbNumber": "11090",
+            "publishedDate": "2019-12-16",
+            "allHighlightFields": "",
+            "score": 361.00165,
+            "foodNutrients": [
+                {
+                    "nutrientId": 2048,
+                    "nutrientName": "Energy (Atwater Specific Factors)",
+                    "nutrientNumber": "958",
+                    "unitName": "KCAL",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 32.0
+                },
+                {
+                    "nutrientId": 2047,
+                    "nutrientName": "Energy (Atwater General Factors)",
+                    "nutrientNumber": "957",
+                    "unitName": "KCAL",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 39.0
+                },
+                {
+                    "nutrientId": 1292,
+                    "nutrientName": "Fatty acids, total monounsaturated",
+                    "nutrientNumber": "645",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.011
+                },
+                {
+                    "nutrientId": 1293,
+                    "nutrientName": "Fatty acids, total polyunsaturated",
+                    "nutrientNumber": "646",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.017
+                },
+                {
+                    "nutrientId": 1265,
+                    "nutrientName": "16:0",
+                    "nutrientNumber": "613",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.029
+                },
+                {
+                    "nutrientId": 1266,
+                    "nutrientName": "18:0",
+                    "nutrientNumber": "614",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.006
+                },
+                {
+                    "nutrientId": 1267,
+                    "nutrientName": "20:0",
+                    "nutrientNumber": "615",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.002
+                },
+                {
+                    "nutrientId": 1268,
+                    "nutrientName": "18:1",
+                    "nutrientNumber": "617",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.01
+                },
+                {
+                    "nutrientId": 1269,
+                    "nutrientName": "18:2",
+                    "nutrientNumber": "618",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.017
+                },
+                {
+                    "nutrientId": 1270,
+                    "nutrientName": "18:3",
+                    "nutrientNumber": "619",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.021
+                },
+                {
+                    "nutrientId": 1323,
+                    "nutrientName": "17:1",
+                    "nutrientNumber": "687",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.001
+                },
+                {
+                    "nutrientId": 1264,
+                    "nutrientName": "14:0",
+                    "nutrientNumber": "612",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.001
+                },
+                {
+                    "nutrientId": 1273,
+                    "nutrientName": "22:0",
+                    "nutrientNumber": "624",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.002
+                },
+                {
+                    "nutrientId": 1258,
+                    "nutrientName": "Fatty acids, total saturated",
+                    "nutrientNumber": "606",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.039
+                },
+                {
+                    "nutrientId": 1062,
+                    "nutrientName": "Energy",
+                    "nutrientNumber": "268",
+                    "unitName": "kJ",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 132
+                },
+                {
+                    "nutrientId": 1009,
+                    "nutrientName": "Starch",
+                    "nutrientNumber": "209",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1005,
+                    "nutrientName": "Carbohydrate, by difference",
+                    "nutrientNumber": "205",
+                    "unitName": "G",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 6.27
+                },
+                {
+                    "nutrientId": 1008,
+                    "nutrientName": "Energy",
+                    "nutrientNumber": "208",
+                    "unitName": "KCAL",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 31.0
+                },
+                {
+                    "nutrientId": 1299,
+                    "nutrientName": "15:0",
+                    "nutrientNumber": "652",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1313,
+                    "nutrientName": "20:2 n-6 c,c",
+                    "nutrientNumber": "672",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1321,
+                    "nutrientName": "18:3 n-6 c,c,c",
+                    "nutrientNumber": "685",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1325,
+                    "nutrientName": "20:3",
+                    "nutrientNumber": "689",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1262,
+                    "nutrientName": "10:0",
+                    "nutrientNumber": "610",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1212,
+                    "nutrientName": "Isoleucine",
+                    "nutrientNumber": "503",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.079
+                },
+                {
+                    "nutrientId": 1213,
+                    "nutrientName": "Leucine",
+                    "nutrientNumber": "504",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.129
+                },
+                {
+                    "nutrientId": 1214,
+                    "nutrientName": "Lysine",
+                    "nutrientNumber": "505",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.135
+                },
+                {
+                    "nutrientId": 1216,
+                    "nutrientName": "Cystine",
+                    "nutrientNumber": "507",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.028
+                },
+                {
+                    "nutrientId": 1219,
+                    "nutrientName": "Valine",
+                    "nutrientNumber": "510",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.125
+                },
+                {
+                    "nutrientId": 1220,
+                    "nutrientName": "Arginine",
+                    "nutrientNumber": "511",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.191
+                },
+                {
+                    "nutrientId": 1221,
+                    "nutrientName": "Histidine",
+                    "nutrientNumber": "512",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.059
+                },
+                {
+                    "nutrientId": 1223,
+                    "nutrientName": "Aspartic acid",
+                    "nutrientNumber": "514",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.325
+                },
+                {
+                    "nutrientId": 1227,
+                    "nutrientName": "Serine",
+                    "nutrientNumber": "518",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.121
+                },
+                {
+                    "nutrientId": 1271,
+                    "nutrientName": "20:4",
+                    "nutrientNumber": "620",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1277,
+                    "nutrientName": "20:1",
+                    "nutrientNumber": "628",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1004,
+                    "nutrientName": "Total lipid (fat)",
+                    "nutrientNumber": "204",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.34
+                },
+                {
+                    "nutrientId": 1010,
+                    "nutrientName": "Sucrose",
+                    "nutrientNumber": "210",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.01
+                },
+                {
+                    "nutrientId": 1011,
+                    "nutrientName": "Glucose (dextrose)",
+                    "nutrientNumber": "211",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.58
+                },
+                {
+                    "nutrientId": 1014,
+                    "nutrientName": "Maltose",
+                    "nutrientNumber": "214",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1051,
+                    "nutrientName": "Water",
+                    "nutrientNumber": "255",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 90.0
+                },
+                {
+                    "nutrientId": 1087,
+                    "nutrientName": "Calcium, Ca",
+                    "nutrientNumber": "301",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 46.0
+                },
+                {
+                    "nutrientId": 1092,
+                    "nutrientName": "Potassium, K",
+                    "nutrientNumber": "306",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 303
+                },
+                {
+                    "nutrientId": 1095,
+                    "nutrientName": "Zinc, Zn",
+                    "nutrientNumber": "309",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.42
+                },
+                {
+                    "nutrientId": 1103,
+                    "nutrientName": "Selenium, Se",
+                    "nutrientNumber": "317",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 1.6
+                },
+                {
+                    "nutrientId": 1109,
+                    "nutrientName": "Vitamin E (alpha-tocopherol)",
+                    "nutrientNumber": "323",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.15
+                },
+                {
+                    "nutrientId": 1125,
+                    "nutrientName": "Tocopherol, beta",
+                    "nutrientNumber": "341",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1126,
+                    "nutrientName": "Tocopherol, gamma",
+                    "nutrientNumber": "342",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.04
+                },
+                {
+                    "nutrientId": 1128,
+                    "nutrientName": "Tocotrienol, alpha",
+                    "nutrientNumber": "344",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.01
+                },
+                {
+                    "nutrientId": 1129,
+                    "nutrientName": "Tocotrienol, beta",
+                    "nutrientNumber": "345",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1167,
+                    "nutrientName": "Niacin",
+                    "nutrientNumber": "406",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.639
+                },
+                {
+                    "nutrientId": 1170,
+                    "nutrientName": "Pantothenic acid",
+                    "nutrientNumber": "410",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.61
+                },
+                {
+                    "nutrientId": 1175,
+                    "nutrientName": "Vitamin B-6",
+                    "nutrientNumber": "415",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.191
+                },
+                {
+                    "nutrientId": 1184,
+                    "nutrientName": "Vitamin K (Dihydrophylloquinone)",
+                    "nutrientNumber": "429",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1012,
+                    "nutrientName": "Fructose",
+                    "nutrientNumber": "212",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.82
+                },
+                {
+                    "nutrientId": 1013,
+                    "nutrientName": "Lactose",
+                    "nutrientNumber": "213",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1003,
+                    "nutrientName": "Protein",
+                    "nutrientNumber": "203",
+                    "unitName": "G",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 2.57
+                },
+                {
+                    "nutrientId": 1007,
+                    "nutrientName": "Ash",
+                    "nutrientNumber": "207",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.83
+                },
+                {
+                    "nutrientId": 1108,
+                    "nutrientName": "Carotene, alpha",
+                    "nutrientNumber": "322",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1075,
+                    "nutrientName": "Galactose",
+                    "nutrientNumber": "287",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1079,
+                    "nutrientName": "Fiber, total dietary",
+                    "nutrientNumber": "291",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 2.4
+                },
+                {
+                    "nutrientId": 1089,
+                    "nutrientName": "Iron, Fe",
+                    "nutrientNumber": "303",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.69
+                },
+                {
+                    "nutrientId": 1090,
+                    "nutrientName": "Magnesium, Mg",
+                    "nutrientNumber": "304",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 21.0
+                },
+                {
+                    "nutrientId": 1091,
+                    "nutrientName": "Phosphorus, P",
+                    "nutrientNumber": "305",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 67.0
+                },
+                {
+                    "nutrientId": 1093,
+                    "nutrientName": "Sodium, Na",
+                    "nutrientNumber": "307",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 36.0
+                },
+                {
+                    "nutrientId": 1098,
+                    "nutrientName": "Copper, Cu",
+                    "nutrientNumber": "312",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.059
+                },
+                {
+                    "nutrientId": 1101,
+                    "nutrientName": "Manganese, Mn",
+                    "nutrientNumber": "315",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.197
+                },
+                {
+                    "nutrientId": 1127,
+                    "nutrientName": "Tocopherol, delta",
+                    "nutrientNumber": "343",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1130,
+                    "nutrientName": "Tocotrienol, gamma",
+                    "nutrientNumber": "346",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1131,
+                    "nutrientName": "Tocotrienol, delta",
+                    "nutrientNumber": "347",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1162,
+                    "nutrientName": "Vitamin C, total ascorbic acid",
+                    "nutrientNumber": "401",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 91.3
+                },
+                {
+                    "nutrientId": 1165,
+                    "nutrientName": "Thiamin",
+                    "nutrientNumber": "404",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.077
+                },
+                {
+                    "nutrientId": 1166,
+                    "nutrientName": "Riboflavin",
+                    "nutrientNumber": "405",
+                    "unitName": "MG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.114
+                },
+                {
+                    "nutrientId": 1333,
+                    "nutrientName": "15:1",
+                    "nutrientNumber": "697",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1261,
+                    "nutrientName": "8:0",
+                    "nutrientNumber": "609",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1210,
+                    "nutrientName": "Tryptophan",
+                    "nutrientNumber": "501",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.033
+                },
+                {
+                    "nutrientId": 1211,
+                    "nutrientName": "Threonine",
+                    "nutrientNumber": "502",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.088
+                },
+                {
+                    "nutrientId": 1215,
+                    "nutrientName": "Methionine",
+                    "nutrientNumber": "506",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.038
+                },
+                {
+                    "nutrientId": 1217,
+                    "nutrientName": "Phenylalanine",
+                    "nutrientNumber": "508",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.117
+                },
+                {
+                    "nutrientId": 1218,
+                    "nutrientName": "Tyrosine",
+                    "nutrientNumber": "509",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.05
+                },
+                {
+                    "nutrientId": 1222,
+                    "nutrientName": "Alanine",
+                    "nutrientNumber": "513",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.104
+                },
+                {
+                    "nutrientId": 1224,
+                    "nutrientName": "Glutamic acid",
+                    "nutrientNumber": "515",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.542
+                },
+                {
+                    "nutrientId": 1225,
+                    "nutrientName": "Glycine",
+                    "nutrientNumber": "516",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.089
+                },
+                {
+                    "nutrientId": 1226,
+                    "nutrientName": "Proline",
+                    "nutrientNumber": "517",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.11
+                },
+                {
+                    "nutrientId": 1300,
+                    "nutrientName": "17:0",
+                    "nutrientNumber": "653",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1185,
+                    "nutrientName": "Vitamin K (phylloquinone)",
+                    "nutrientNumber": "430",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 102
+                },
+                {
+                    "nutrientId": 1263,
+                    "nutrientName": "12:0",
+                    "nutrientNumber": "611",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1177,
+                    "nutrientName": "Folate, total",
+                    "nutrientNumber": "417",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 65.0
+                },
+                {
+                    "nutrientId": 1106,
+                    "nutrientName": "Vitamin A, RAE",
+                    "nutrientNumber": "320",
+                    "unitName": "UG",
+                    "derivationCode": "NC",
+                    "derivationDescription": "Calculated",
+                    "value": 8.0
+                },
+                {
+                    "nutrientId": 1120,
+                    "nutrientName": "Cryptoxanthin, beta",
+                    "nutrientNumber": "334",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1122,
+                    "nutrientName": "Lycopene",
+                    "nutrientNumber": "337",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1107,
+                    "nutrientName": "Carotene, beta",
+                    "nutrientNumber": "321",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 93.0
+                },
+                {
+                    "nutrientId": 1123,
+                    "nutrientName": "Lutein + zeaxanthin",
+                    "nutrientNumber": "338",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 745
+                },
+                {
+                    "nutrientId": 1084,
+                    "nutrientName": "Fiber, insoluble",
+                    "nutrientNumber": "297",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 2.4
+                },
+                {
+                    "nutrientId": 1082,
+                    "nutrientName": "Fiber, soluble",
+                    "nutrientNumber": "295",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1116,
+                    "nutrientName": "Phytoene",
+                    "nutrientNumber": "330",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1117,
+                    "nutrientName": "Phytofluene",
+                    "nutrientNumber": "331",
+                    "unitName": "UG",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1002,
+                    "nutrientName": "Nitrogen",
+                    "nutrientNumber": "202",
+                    "unitName": "G",
+                    "derivationCode": "A",
+                    "derivationDescription": "Analytical",
+                    "value": 0.41
+                },
+                {
+                    "nutrientId": 1063,
+                    "nutrientName": "Sugars, Total NLEA",
+                    "nutrientNumber": "269.3",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 1.4
+                },
+                {
+                    "nutrientId": 1050,
+                    "nutrientName": "Carbohydrate, by summation",
+                    "nutrientNumber": "205.2",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 3.8
+                },
+                {
+                    "nutrientId": 1314,
+                    "nutrientName": "16:1 c",
+                    "nutrientNumber": "673",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1315,
+                    "nutrientName": "18:1 c",
+                    "nutrientNumber": "674",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.01
+                },
+                {
+                    "nutrientId": 2009,
+                    "nutrientName": "14:1 c",
+                    "nutrientNumber": "822",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 2010,
+                    "nutrientName": "17:1 c",
+                    "nutrientNumber": "825",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.001
+                },
+                {
+                    "nutrientId": 2012,
+                    "nutrientName": "20:1 c",
+                    "nutrientNumber": "829",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 2016,
+                    "nutrientName": "18:2 c",
+                    "nutrientNumber": "831",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.017
+                },
+                {
+                    "nutrientId": 2018,
+                    "nutrientName": "18:3 c",
+                    "nutrientNumber": "833",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 2020,
+                    "nutrientName": "20:3 c",
+                    "nutrientNumber": "835",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 2022,
+                    "nutrientName": "20:4 c",
+                    "nutrientNumber": "836",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 2026,
+                    "nutrientName": "20:2 c",
+                    "nutrientNumber": "840",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.0
+                },
+                {
+                    "nutrientId": 1085,
+                    "nutrientName": "Total fat (NLEA)",
+                    "nutrientNumber": "298",
+                    "unitName": "G",
+                    "derivationCode": "AS",
+                    "derivationDescription": "Summed",
+                    "value": 0.07
+                }
+            ]
+        }
+    ],
+    "aggregations": {
+        "dataType": {
+            "Branded": 3233,
+            "Survey (FNDDS)": 278,
+            "SR Legacy": 20,
+            "Foundation": 1
+        },
+        "nutrients": {}
+    }
+}

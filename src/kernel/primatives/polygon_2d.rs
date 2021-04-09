@@ -1,6 +1,25 @@
+// let points: Vec<Vector2<f32>> = vec![
+//         Vector2::new(0f32, 0f32),
+//         Vector2::new(1f32, 0f32),
+//         Vector2::new(1f32, 1f32),
+//         Vector2::new(0f32, 1f32),
+//         Vector2::new(0f32, 0f32),
+//         //Clockwise Subtraction
+//         // Vector2::new(0f32, 5f32),
+//         // Vector2::new(5f32, 5f32),
+//         // Vector2::new(5f32, 0f32),
+//         // Vector2::new(0f32, 0f32),
+//     ];
+//     // let area = polygon_2d::area(&points);
+//     // let centroid = polygon_2d::centroid(&points);
+//     // //let moi = polygon_2d::moment_of_inertia(&points, Some(Vector2::new(0f32, 0f32)));
+//     // let moi = polygon_2d::moment_of_inertia(&points, None);
+//     // println!("Area: {}, Centroid: {}", area, centroid);
+//     // println!("moi: {:?}", moi);
+
 use crate::{
     convex_hull::{get_orientation, Orientation},
-    line_segment2::LineSegment2,
+    kernel::Segment2,
 }; //TODO: Move these to a Utilities Module
 use nalgebra::Vector2;
 /// Ordered List of points representing a manifold polygon
@@ -119,10 +138,10 @@ pub fn principal_moment_of_inertia(ixx: f32, iyy: f32, ixy: f32) -> (f32, f32, f
 // Sum(yA)
 fn first_moment_q() {}
 
-fn split_hull(points: &Vec<Vector2<f32>>, split_line: LineSegment2) {
+fn split_hull(points: &Vec<Vector2<f32>>, split_line: Segment2) {
     let mut intersections: Vec<(usize, Vector2<f32>)> = Vec::new(); //Collect (Index, Direction-Vector)
     for i in 0..points.len() - 1 {
-        let segment = LineSegment2::new(points[i], points[i + 1]);
+        let segment = Segment2::new(points[i], points[i + 1]);
         if split_line.intersects(&segment) {
             intersections.push((i, &segment.end - &segment.start));
         }

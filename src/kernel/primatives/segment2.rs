@@ -1,14 +1,14 @@
 use crate::convex_hull::{get_orientation, Orientation};
 use nalgebra::Vector2;
-pub struct LineSegment2 {
+pub struct Segment2 {
     pub start: Vector2<f32>,
     pub end: Vector2<f32>,
 }
-impl LineSegment2 {
+impl Segment2 {
     pub fn new(start: Vector2<f32>, end: Vector2<f32>) -> Self {
         Self { start, end }
     }
-    pub fn intersects(&self, other: &LineSegment2) -> bool {
+    pub fn intersects(&self, other: &Segment2) -> bool {
         //https://www.geeksforgeeks.org/check-if-two-given-line-segments-intersect/
         let self_other_start = get_orientation(&self.start, &self.end, &other.start);
         let self_other_end = get_orientation(&self.start, &self.end, &other.end);
