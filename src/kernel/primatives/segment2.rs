@@ -1,19 +1,19 @@
-use crate::convex_hull::{get_orientation, Orientation};
-use nalgebra::Vector2;
+use super::super::Orientation;
+use super::Point2;
 pub struct Segment2 {
-    pub start: Vector2<f32>,
-    pub end: Vector2<f32>,
+    pub start: Point2,
+    pub end: Point2,
 }
 impl Segment2 {
-    pub fn new(start: Vector2<f32>, end: Vector2<f32>) -> Self {
+    pub fn new(start: Point2, end: Point2) -> Self {
         Self { start, end }
     }
     pub fn intersects(&self, other: &Segment2) -> bool {
         //https://www.geeksforgeeks.org/check-if-two-given-line-segments-intersect/
-        let self_other_start = get_orientation(&self.start, &self.end, &other.start);
-        let self_other_end = get_orientation(&self.start, &self.end, &other.end);
-        let other_self_start = get_orientation(&other.start, &other.end, &self.start);
-        let other_self_end = get_orientation(&other.start, &other.end, &self.end);
+        let self_other_start = Orientation::get(&self.start, &self.end, &other.start);
+        let self_other_end = Orientation::get(&self.start, &self.end, &other.end);
+        let other_self_start = Orientation::get(&other.start, &other.end, &self.start);
+        let other_self_end = Orientation::get(&other.start, &other.end, &self.end);
         //General Case:
         if self_other_start != self_other_end && other_self_start != other_self_end {
             return true;
@@ -33,18 +33,21 @@ impl Segment2 {
         false
     }
 
-    //Assumes Other is Colinear with self
-    fn on_segment(&self, other: &Vector2<f32>) -> bool {
-        let x_lt = self.end.x <= f32::max(self.start.x, other.x);
-        let x_gt = self.end.x >= f32::min(self.start.x, other.x);
+    pub fn on_segment(&self, other: &Point2) -> bool {
+        match Orientation::get(&self.start, &self.end, other) {
+            Orientation::Collinear => {
+                let x_lt = self.end.x <= f32::max(self.start.x, other.x);
+                let x_gt = self.end.x >= f32::min(self.start.x, other.x);
 
-        let y_lt = self.end.y <= f32::max(self.start.y, other.y);
-        let y_gt = self.end.y >= f32::min(self.start.y, other.y);
+                let y_lt = self.end.y <= f32::max(self.start.y, other.y);
+                let y_gt = self.end.y >= f32::min(self.start.y, other.y);
 
-        if x_lt && x_gt && y_lt && y_gt {
-            return true;
+                if x_lt && x_gt && y_lt && y_gt {
+                    return true;
+                }
+                false
+            }
+            _ => false,
         }
-
-        false
     }
 }

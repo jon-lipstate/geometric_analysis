@@ -1,4 +1,4 @@
-use nalgebra::Vector2;
+use crate::kernel::primatives::{Point2, Vector2};
 use std::cmp::Ordering;
 
 pub fn cmp_f32(a: f32, b: f32) -> Ordering {
@@ -14,20 +14,12 @@ pub fn cmp_f32(a: f32, b: f32) -> Ordering {
     }
 }
 
-pub fn get_orientation(a: &Vector2<f32>, b: &Vector2<f32>, c: &Vector2<f32>) -> Orientation {
-    let det: f32 = (b.x - a.x) * (c.y - b.y) - (b.y - a.y) * (c.x - b.x);
+///TODO: Allow any primative, a point/line would do the normal distance etc
+pub fn dist_squared(a: &Vector2, b: &Vector2) -> f32 {
+    let dx = b.x - a.x;
+    let dy = b.y - a.y;
+    return dx * dx + dy * dy;
+}
 
-    if cmp_f32(0f32, det) == Ordering::Equal {
-        return Orientation::Collinear;
-    } else if det > 0f32 {
-        return Orientation::CounterClockwise;
-    } else {
-        return Orientation::Clockwise;
-    }
-}
-#[derive(PartialEq, Debug)]
-pub enum Orientation {
-    Collinear,
-    Clockwise,
-    CounterClockwise,
-}
+//Predicate: discrete set of results (e.g. orientation)
+//Construction: Produces a # or geo entity, e.g. distance

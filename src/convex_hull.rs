@@ -1,4 +1,4 @@
-use crate::kernel::{cmp_f32, get_orientation, Orientation};
+use crate::kernel::{cmp_f32, dist_squared, Orientation};
 use nalgebra::Vector2;
 use std::cmp::Ordering;
 //https://www.geeksforgeeks.org/convex-hull-set-2-graham-scan/
@@ -53,12 +53,6 @@ fn sort_polar(anchor: &Vector2<f32>, a: &Vector2<f32>, b: &Vector2<f32>) -> Orde
     }
 }
 
-fn dist_squared(a: &Vector2<f32>, b: &Vector2<f32>) -> f32 {
-    let dx = b.x - a.x;
-    let dy = b.y - a.y;
-    return dx * dx + dy * dy;
-}
-
 fn set_bottom_left_point(points: &mut Vec<Vector2<f32>>) {
     //Find Min Y Point & Set as Anchor:
     let mut y_min = points[0].y;
@@ -95,7 +89,7 @@ pub fn graham_scan(points: &mut Vec<Vector2<f32>>) -> Vec<Vector2<f32>> {
             let hull_second_last: &Vector2<f32> = &hull[hull.len() - 2];
             let points_next: &Vector2<f32> = &points[i];
 
-            if get_orientation(hull_second_last, hull_last, points_next)
+            if Orientation::get(hull_second_last, hull_last, points_next)
                 == Orientation::CounterClockwise
             {
                 break;
@@ -129,7 +123,7 @@ pub fn jarvis_march(points: &mut Vec<Vector2<f32>>) -> Vec<Vector2<f32>> {
                 candidate = Some(next);
                 continue;
             }
-            match get_orientation(&prev, &candidate.unwrap(), &next) {
+            match Orientation::get(&prev, &candidate.unwrap(), &next) {
                 Orientation::Collinear => {
                     let candidate_is_closer =
                         dist_squared(&prev, &candidate.unwrap()) < dist_squared(&prev, &next);
